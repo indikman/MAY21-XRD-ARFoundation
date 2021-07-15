@@ -42,4 +42,9 @@ public class RobotMovement : MonoBehaviour
 
         transform.rotation = Quaternion.LookRotation(direction);
     }
+
+    private void OnDestroy()
+    {
+        GameManager.instance.LostLife();
+    }
 }
